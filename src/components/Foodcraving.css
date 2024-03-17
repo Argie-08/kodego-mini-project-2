@@ -1,0 +1,58 @@
+.cardTemplate {
+  height: 500px;
+  cursor: pointer;
+  position: relative;
+}
+.cardImage {
+  height: 400px;
+  transition: 1s;
+}
+.cardImage:hover {
+  transform: scale(1.1);
+  overflow: hidden;
+}
+
+.overlayCrave {
+  visibility: hidden;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+.overlayCrave:hover {
+  visibility: visible;
+}
+.cravingText {
+  color: rgb(226, 114, 73);
+  font-weight: bold;
+  font-size: clamp(1.8rem, 5vw, 2.3rem);
+}
+.modalBox2 {
+  background-color: rgb(226, 114, 73);
+  color: white;
+}
+.modalPic {
+  object-fit: cover;
+}
+.modalClose {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.btn-close {
+  background-color: white !important;
+}
+.modalHeader {
+  border: none !important;
+}
+.modalText {
+  font-family: "Brush Script MT", cursive;
+  color: black;
+  font-size: 3rem;
+}
+.craveText {
+  font-size: 1.5rem !important;
+}

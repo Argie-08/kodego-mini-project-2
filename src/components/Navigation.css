@@ -1,0 +1,27 @@
+.navContainer {
+  border: solid 2px black;
+  background-color: white;
+}
+.logo {
+  height: clamp(30px, 10vw, 60px);
+  object-fit: cover;
+}
+.navBarText a {
+  font-weight: bold;
+  font-size: 15px;
+  color: black;
+}
+.navBarText a:hover {
+  color: rgb(226, 114, 73);
+}
+.NavWake {
+  font-family: "Brush Script MT", cursive;
+  font-size: 2rem !important;
+  color: white !important;
+}
+.NavBarTest {
+  background-color: rgba(255, 255, 255, 0.6) !important;
+}
+.NavBarTest2 {
+  background-color: rgba(0, 0, 0, 1) !important;
+}

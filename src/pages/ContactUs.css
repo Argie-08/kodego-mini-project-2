@@ -1,0 +1,30 @@
+.ContactBase {
+  height: 80vh;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ContactWall {
+  height: 100%;
+  width: 100%;
+  background-image: url(../assets/contactWall.jpg);
+  filter: blur(5px);
+}
+.ContactForm {
+  position: absolute;
+  border: solid 2px black;
+  width: 60%;
+  border-radius: 1rem;
+}
+.contactButton {
+  background-color: rgb(194, 85, 46);
+  color: white;
+  border: solid 2px rgb(194, 85, 46);
+  transition: 0.5s;
+}
+.contactButton:hover {
+  background-color: rgb(141, 60, 30);
+  border: solid 2px rgb(141, 60, 30);
+}

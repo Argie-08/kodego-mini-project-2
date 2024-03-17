@@ -1,0 +1,83 @@
+* {
+  /* border: dotted red 1px; */
+}
+.aboutHead {
+  height: 300px;
+  width: 100%;
+  position: relative;
+}
+.aboutImg {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.aboutSubTxt {
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  background-color: white;
+  width: 40%;
+  height: 20%;
+  margin: 0;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  font-family: "Brush Script MT", cursive;
+  font-size: clamp(3rem, 10vw, 4.5rem);
+}
+.aboutContent {
+  height: 400px;
+  width: 100%;
+}
+.aboutImges {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-top: solid 20px black;
+}
+.aboutTxt {
+  border: solid 2px black;
+  font-size: 1.25rem;
+}
+
+.aboutCard {
+  width: 100%;
+  /* object-fit: cover; */
+  overflow: hidden;
+  position: relative;
+}
+.aboutChief {
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
+
+  border-bottom: solid 20px black;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.aboutChief:hover {
+  transform: scale(1.1);
+  border-bottom: solid 5px black;
+}
+.overlayChief {
+  background-color: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 14.6%;
+  width: 100%;
+  z-index: 2;
+}
+.aboutMainText {
+  font-size: 1.25rem;
+}
+.chiefName {
+  font-size: 1rem !important;
+}
+.featureText {
+  color: rgb(194, 85, 46);
+  font-family: "Brush Script MT", cursive;
+  font-size: 3rem;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
+}

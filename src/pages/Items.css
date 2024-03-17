@@ -1,0 +1,93 @@
+.recipeHead {
+  font-family: "Brush Script MT", cursive;
+}
+.recipeSearch button {
+  background-color: rgb(252, 128, 84);
+}
+.recipeSearch button:hover {
+  background-color: rgb(226, 114, 73);
+}
+.recipeSearch input {
+  width: 40%;
+  border: solid 2px black;
+  border-radius: 1rem;
+}
+.categoryBtn {
+  background-color: black;
+  color: white;
+  border: solid 2px black;
+  transition: 0.5s;
+  border-radius: 0.6rem;
+  width: fit-content;
+}
+
+.categoryBtn:hover {
+  background-color: white;
+  color: black;
+  box-shadow: 2px 5px;
+}
+.recipeGalleryCard {
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
+}
+.recipeThisCard {
+  cursor: pointer;
+  position: relative;
+}
+.overlayGallery {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.overlayGallery::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  transform: scaleY(0);
+  transform-origin: bottom;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: 0.5s;
+}
+.overlayGallery:hover::before {
+  transform: scaleY(1);
+}
+.galleryTitle {
+  z-index: 2;
+}
+.searchInputs {
+  width: 100%;
+}
+
+.modalPic {
+  height: 400px;
+  width: 100%;
+  object-fit: cover;
+}
+.modalBtn {
+  width: 100%;
+  background-color: rgb(226, 114, 73);
+  border: solid 2px white;
+  color: white;
+  transition: 0.5s;
+}
+.modalBtn:hover {
+  background-color: rgb(252, 161, 128);
+  border: solid 2px rgb(0, 0, 0, 0.5);
+  color: black;
+}
+.modalBtn-link {
+  text-decoration: none;
+}
+.modalBody3 {
+  background-color: rgb(226, 114, 73);
+}
+.recipeWrap {
+  flex-wrap: wrap;
+}

@@ -1,0 +1,76 @@
+* {
+  /* border: dotted 1px red; */
+}
+.fontSize {
+  font-size: 0.8rem;
+  position: relative;
+  text-decoration: none;
+  color: black;
+  margin-top: 1rem;
+}
+.fontSize1 {
+  font-size: 0.8rem;
+  text-decoration: none;
+  color: black;
+  margin-top: 1rem;
+  width: fit-content;
+}
+
+.fontSize::before {
+  content: "";
+  position: absolute;
+  background-color: rgb(209, 120, 87);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  transition: 0.3s;
+  transform: scaleX(0);
+  transform-origin: left;
+  z-index: 2;
+}
+.fontSize:hover::before {
+  transform: scaleX(1);
+}
+
+/* .fontSize:hover {
+  color: rgb(209, 120, 87);
+  text-decoration: underline black solid 1px;
+} */
+.footerFoot img {
+  height: 30px;
+  width: fit-content;
+}
+.footerFoot .footerLogo {
+  height: 120px;
+  width: fit-content;
+  cursor: pointer;
+}
+.footerBack {
+  height: fit-content;
+  width: 100%;
+  background-color: rgb(244, 252, 249);
+  display: flex;
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+.footerFoot {
+  height: fit-content;
+}
+.icon {
+  font-size: 2rem;
+  cursor: pointer;
+}
+.icon1:hover {
+  color: #316ff6;
+}
+.icon2:hover {
+  color: #fc6565;
+}
+.icon3:hover {
+  color: #be0000;
+}
+.icon4:hover {
+  color: #fccc63;
+}

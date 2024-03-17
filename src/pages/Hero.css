@@ -1,0 +1,130 @@
+.bike {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.itemContainer {
+  height: 400px;
+  display: flex;
+}
+.cardBox {
+  max-width: 250px;
+}
+.carousel-control-next-icon {
+  background-color: black;
+}
+.carousel-control-prev-icon {
+  background-color: black;
+}
+.borderbottom {
+  border-bottom: solid 2px rgb(226, 114, 73);
+  font-family: "Brush Script MT", cursive;
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+}
+.carouselContainer {
+  height: 600px;
+  position: relative;
+}
+.carouselMain {
+  position: relative;
+}
+.welcomeTitle {
+  position: absolute;
+  bottom: -30px;
+  left: 0;
+  background-color: white;
+  width: 40%;
+  height: 12%;
+  margin: 0;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  font-family: "Brush Script MT", cursive;
+  font-size: clamp(3rem, 10vw, 5.5rem);
+}
+.navBase {
+  height: 600px;
+  width: 100%;
+  position: relative;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+.carouselText {
+  z-index: 2;
+}
+.bodyElement {
+  background-color: black;
+  height: fit-content;
+  width: 100%;
+}
+.aboutContents {
+  height: 100%;
+}
+.aboutText {
+  color: white;
+  font-size: 1.25rem;
+}
+.aboutContents button {
+  background-color: transparent;
+  color: white;
+  border: solid 2px white;
+  transition: 0.5s;
+  font-size: 1.25rem;
+}
+.aboutContents button:hover {
+  background-color: white;
+  color: black;
+}
+
+.foodReview {
+  height: 60vh;
+}
+.foodReview-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.foodReview-box {
+  width: 80%;
+}
+.foodReview-column {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+.foodReview-btn {
+  background-color: transparent;
+  color: rgb(255, 250, 250);
+  border: solid 2px rgb(255, 255, 255);
+  transition: 0.2s;
+  font-size: clamp(1rem, 10vw, 1.25rem);
+}
+.foodReview-btn:hover {
+  background-color: rgb(226, 114, 73);
+  /* color: rgb(5, 5, 5); */
+  border: solid 2px rgb(226, 114, 73);
+}
+.overlay-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  height: 100%;
+  width: 100%;
+}
+.bondText {
+  color: rgb(226, 114, 73);
+  font-weight: bold;
+  font-size: clamp(3rem, 4vw, 5rem);
+}
+.favText {
+  font-size: clamp(1rem, 7vw, 1.25rem);
+}
