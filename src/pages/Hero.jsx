@@ -37,7 +37,11 @@ const Hero = () => {
           <Carousel fade className="carouselMain">
             {carouselData.map((detail, index) => {
               return (
-                <Carousel.Item interval={2500} className="carouselContainer">
+                <Carousel.Item
+                  interval={2500}
+                  className="carouselContainer"
+                  key={index}
+                >
                   <div className="overlay"></div>
                   <img src={detail.strMealThumb} className="bike" />
                   <Carousel.Caption className="carouselText">

@@ -40,7 +40,7 @@ const Foodcraving = () => {
       <Row className="g-0">
         {cravingData.map((detail, index) => {
           return (
-            <Col sm={12} lg={4} className="cardBox">
+            <Col sm={12} lg={4} className="cardBox" key={index}>
               <Card
                 className="cardTemplate rounded-0 border-0 border-end border-start border-1 border-dark "
                 onClick={() => exploreRecipeModal(detail)}

@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import Product from "../API/Product.json";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -7,36 +6,36 @@ import Card from "react-bootstrap/Card";
 import Modal from "react-bootstrap/Modal";
 import Recipe from "../assets/Recipe.pdf";
 import "./Items.css";
+import axios from "axios";
 
 const Items = () => {
-  const [items, setItems] = useState(Product);
   const [lgShow, setLgShow] = useState(false);
   const [modalRecipe, setModalRecipe] = useState({});
-  const [currentPage, setCurrentPage] = useState(1);
-  // const recordsPerPage = 8;
-  // const lastIndex = currentPage * recordsPerPage;
-  // const firstIndex = lastIndex - recordsPerPage;
-  // const records = Product.slice(firstIndex, lastIndex);
-  // const npage = Math.ceil(Product.length / recordsPerPage);
-  // const numbers = [...Array(npage + 1).keys()].slice(1);
-
-  const fetchDatas = async () => {
-    const response = await fetch(
-      "https://www.themealdb.com/api/json/v1/1/search.php?s="
-    );
-    const data = await response.json();
-  };
-
-  const filterItems = (cat) => {
-    const updateItems = Product.filter((curItem) => {
-      return curItem.strCategory === cat;
-    });
-    setItems(updateItems);
-  };
+  const [recipee, setRecipe] = useState([]);
+  const [selected, setSelected] = useState([]);
 
   useEffect(() => {
+    fetchDatas();
     return () => {};
   }, []);
+
+  async function fetchDatas() {
+    const response = await axios.get(
+      "https://www.themealdb.com/api/json/v1/1/search.php?s="
+    );
+    const filter = response.data;
+    const data = filter.meals;
+    setRecipe(data);
+  }
+
+  function filterItems(title) {
+    const filtered = title;
+    if (filtered === "All") {
+      setSelected(recipee);
+    } else {
+      setSelected(recipee.filter((data) => data.strCategory === filtered));
+    }
+  }
 
   function handleRecipeModal(selectedRecipe) {
     setModalRecipe(selectedRecipe);
@@ -50,7 +49,10 @@ const Items = () => {
       </Container>
 
       <Container className="d-flex justify-content-center mb-5 flex-wrap gap-4">
-        <button className="categoryBtn  px-5" onClick={() => setItems(Product)}>
+        <button
+          className="categoryBtn  px-5"
+          onClick={() => filterItems("All")}
+        >
           All
         </button>
 
@@ -99,9 +101,9 @@ const Items = () => {
       </Container>
       <Container className="mb-5">
         <Row>
-          {items.map((detail) => {
+          {selected.map((detail, i) => {
             return (
-              <Col sm={12} md={3} className="mb-4">
+              <Col sm={12} md={3} className="mb-4" key={i}>
                 <Card
                   className="rounded-0 recipeThisCard"
                   onClick={() => handleRecipeModal(detail)}

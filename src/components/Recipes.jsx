@@ -23,7 +23,6 @@ const Recipes = () => {
       "https://www.themealdb.com/api/json/v1/1/search.php?s="
     );
     const data = await response.json();
-    console.log(data);
     const newGalleryData = data.meals.filter((recipe, index) => {
       return index >= 13;
     });
@@ -55,9 +54,9 @@ const Recipes = () => {
                 return val;
               }
             })
-            .map((val) => {
+            .map((val, i) => {
               return (
-                <Col sm={12} md={3}>
+                <Col sm={12} md={3} key={i}>
                   <Card
                     className="mt-2 cardSize border-0 mb-4"
                     onClick={() => exploreRecipeModal(val)}
