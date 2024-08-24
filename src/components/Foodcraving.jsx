@@ -26,7 +26,6 @@ const Foodcraving = () => {
       return index < 3;
     });
     setCravingData(newGetData);
-    // console.log(newGetData);
   }
 
   function exploreRecipeModal(exploreRecipe) {
@@ -36,7 +35,7 @@ const Foodcraving = () => {
 
   return (
     <Container className="mb-5">
-      <h5 className="mb-5 mt-3 cravingText">WHAT WE'RE CRAVING</h5>
+      <h5 className="mb-5 mt-3 cravingText">What we're craving...</h5>
       <Row className="g-0">
         {cravingData.map((detail, index) => {
           return (

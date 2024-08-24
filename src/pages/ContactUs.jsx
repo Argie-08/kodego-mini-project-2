@@ -11,9 +11,9 @@ import "./ContactUs.css";
 
 const ContactUs = () => {
   return (
-    <>
+    <div className="ContactWall">
       <Container className="ContactBase">
-        <div className="ContactWall"></div>
+        {/* <div className="ContactWall"></div> */}
         <Form className="ContactForm p-5 ">
           <h4 className="text-center">CONTACT US</h4>
           <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -50,7 +50,7 @@ const ContactUs = () => {
           </div>
         </Form>
       </Container>
-    </>
+    </div>
   );
 };
 

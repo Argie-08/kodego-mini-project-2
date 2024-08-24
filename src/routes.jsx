@@ -17,7 +17,7 @@ const routes = [
   },
   {
     name: "RECIPES",
-    path: "/items",
+    path: "/recipes",
     element: <Items />,
   },
   {

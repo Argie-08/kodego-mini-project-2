@@ -30,10 +30,7 @@ const Navigation = () => {
             <Navbar.Brand href="#">
               <img src={logo} alt="" className="logo" />
             </Navbar.Brand>
-            <Navbar.Toggle
-              //   aria-controls={`offcanvasNavbar-expand`}
-              onClick={() => setShow(true)}
-            />
+            <Navbar.Toggle onClick={() => setShow(true)} />
             <Navbar.Offcanvas
               className="NavBarTest"
               id={`offcanvasNavbar-expand`}

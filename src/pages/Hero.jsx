@@ -31,7 +31,7 @@ const Hero = () => {
   }
 
   return (
-    <>
+    <main className="">
       <Container id="Homebased">
         <div className="navBase mb-5">
           <Carousel fade className="carouselMain">
@@ -45,7 +45,7 @@ const Hero = () => {
                   <div className="overlay"></div>
                   <img src={detail.strMealThumb} className="bike" />
                   <Carousel.Caption className="carouselText">
-                    <h3>{detail.strMeal}</h3>
+                    <h3>{detail.strMeal.toUpperCase()} Cuisine</h3>
                   </Carousel.Caption>
                 </Carousel.Item>
               );
@@ -74,7 +74,7 @@ const Hero = () => {
         </Container>
       </div>
       <Foodcraving />
-      <Container className="mb-4">
+      <Container className="mb-4 ">
         <h5 className="mb-3 w-100  border-2 pb-2 borderbottom">
           "A great cook, one learns by doing great cook..."
         </h5>
@@ -93,7 +93,7 @@ const Hero = () => {
               <p className="text-white favText">
                 Come and see your favorite food from our e-cookbook{" "}
               </p>
-              <a href="/items">
+              <a href="/recipes">
                 <button className="foodReview-btn px-4 py-1 mb-2">MENU</button>
               </a>
             </div>
@@ -107,7 +107,7 @@ const Hero = () => {
         </Row>
       </Container>
       <Recipes />
-    </>
+    </main>
   );
 };
 

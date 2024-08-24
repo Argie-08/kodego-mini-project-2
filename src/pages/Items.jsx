@@ -13,6 +13,8 @@ const Items = () => {
   const [modalRecipe, setModalRecipe] = useState({});
   const [recipee, setRecipe] = useState([]);
   const [selected, setSelected] = useState([]);
+  const [defaultRecipe, setDefaultRecipe] = useState(true);
+  const [filterRecipe, setFilterRecipe] = useState(false);
 
   useEffect(() => {
     fetchDatas();
@@ -29,6 +31,8 @@ const Items = () => {
   }
 
   function filterItems(title) {
+    setDefaultRecipe(false);
+    setFilterRecipe(true);
     const filtered = title;
     if (filtered === "All") {
       setSelected(recipee);
@@ -101,28 +105,54 @@ const Items = () => {
       </Container>
       <Container className="mb-5">
         <Row>
-          {selected.map((detail, i) => {
-            return (
-              <Col sm={12} md={3} className="mb-4" key={i}>
-                <Card
-                  className="rounded-0 recipeThisCard"
-                  onClick={() => handleRecipeModal(detail)}
-                >
-                  <Card.Img
-                    variant="top"
-                    src={detail.strMealThumb}
-                    className="rounded-0 recipeGalleryCard"
-                  />
-                  <Card.Body className="p-0 bg-dark galleryTitle">
-                    <Card.Title className="text-center text-white m-0 my-1">
-                      {detail.strMeal}
-                    </Card.Title>
-                  </Card.Body>
-                  <div className="overlayGallery"></div>
-                </Card>
-              </Col>
-            );
-          })}
+          {defaultRecipe &&
+            recipee.map((detail, i) => {
+              return (
+                <Col sm={12} md={3} className="mb-4" key={i}>
+                  <Card
+                    className="rounded-0 recipeThisCard"
+                    onClick={() => handleRecipeModal(detail)}
+                  >
+                    <Card.Img
+                      variant="top"
+                      src={detail.strMealThumb}
+                      className="rounded-0 recipeGalleryCard"
+                    />
+                    <Card.Body className="p-0 bg-dark galleryTitle">
+                      <Card.Title className="text-center text-white m-0 my-1">
+                        {detail.strMeal}
+                      </Card.Title>
+                    </Card.Body>
+                    <div className="overlayGallery"></div>
+                  </Card>
+                </Col>
+              );
+            })}
+        </Row>
+        <Row>
+          {filterRecipe &&
+            selected.map((detail, i) => {
+              return (
+                <Col sm={12} md={3} className="mb-4" key={i}>
+                  <Card
+                    className="rounded-0 recipeThisCard"
+                    onClick={() => handleRecipeModal(detail)}
+                  >
+                    <Card.Img
+                      variant="top"
+                      src={detail.strMealThumb}
+                      className="rounded-0 recipeGalleryCard"
+                    />
+                    <Card.Body className="p-0 bg-dark galleryTitle">
+                      <Card.Title className="text-center text-white m-0 my-1">
+                        {detail.strMeal}
+                      </Card.Title>
+                    </Card.Body>
+                    <div className="overlayGallery"></div>
+                  </Card>
+                </Col>
+              );
+            })}
         </Row>
       </Container>
       {modalRecipe ? (

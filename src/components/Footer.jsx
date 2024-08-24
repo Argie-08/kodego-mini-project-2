@@ -29,11 +29,7 @@ const Footer = () => {
               MENU
             </a>
           </Col>
-          {/* <Col sm={12} md={1} className="d-flex align-items-center pt-2 ">
-            <a href="" className="fontSize m-0">
-              REVIEWS
-            </a>
-          </Col> */}
+
           <Col sm={12} md={1} className="d-flex align-items-center pt-2 ">
             <a href="/body" className="fontSize m-0">
               ABOUT US

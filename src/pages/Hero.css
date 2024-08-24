@@ -60,6 +60,9 @@
 .carouselText {
   z-index: 2;
 }
+.carouselText h3 {
+  font-weight: 700;
+}
 .bodyElement {
   background-color: black;
   height: fit-content;
@@ -70,18 +73,20 @@
 }
 .aboutText {
   color: white;
-  font-size: 1.25rem;
+  font-size: clamp(1rem, 0.3077rem + 1.9231vw, 1.5rem);
 }
 .aboutContents button {
-  background-color: transparent;
-  color: white;
-  border: solid 2px white;
+  background-color: rgb(226, 114, 73);
+  color: rgba(0, 0, 0, 1);
+  border: solid 2px rgb(0, 0, 0);
   transition: 0.5s;
   font-size: 1.25rem;
+  font-weight: 700;
 }
 .aboutContents button:hover {
-  background-color: white;
-  color: black;
+  background-color: transparent;
+  color: rgb(255, 250, 250);
+  border: solid 1px white;
 }
 
 .foodReview {
@@ -101,16 +106,17 @@
   position: relative;
 }
 .foodReview-btn {
-  background-color: transparent;
-  color: rgb(255, 250, 250);
-  border: solid 2px rgb(255, 255, 255);
+  background-color: rgb(226, 114, 73);
+  color: rgba(0, 0, 0, 0.8);
+  font-weight: 700;
+  border: solid 2px rgb(226, 114, 73);
   transition: 0.2s;
   font-size: clamp(1rem, 10vw, 1.25rem);
 }
 .foodReview-btn:hover {
-  background-color: rgb(226, 114, 73);
-  /* color: rgb(5, 5, 5); */
-  border: solid 2px rgb(226, 114, 73);
+  background-color: rgba(33, 37, 41, 1);
+  border: solid 2px rgb(225, 225, 225);
+  color: rgb(225, 225, 225);
 }
 .overlay-img {
   position: absolute;
@@ -127,4 +133,24 @@
 }
 .favText {
   font-size: clamp(1rem, 7vw, 1.25rem);
+}
+.carousel-caption {
+  bottom: 5rem !important;
+}
+.carousel-indicators {
+  bottom: 4rem !important;
+}
+
+@media (max-width: 576px) {
+  .aboutButtons {
+    font-size: 1rem !important;
+  }
+  .borderbottom {
+    text-align: center;
+  }
+}
+@media (max-width: 768px) {
+  .foodReview-box {
+    width: 100%;
+  }
 }
