@@ -17,6 +17,10 @@ const Navigation = () => {
     setShow(false);
     navigate(path);
   }
+
+  function home() {
+    navigate("/");
+  }
   return (
     <>
       {["md"].map((expand) => (
@@ -28,7 +32,7 @@ const Navigation = () => {
         >
           <Container fluid className="navContainer py-0 px-3 mx-2">
             <Navbar.Brand href="#">
-              <img src={logo} alt="" className="logo" />
+              <img src={logo} alt="" className="logo" onClick={home} />
             </Navbar.Brand>
             <Navbar.Toggle onClick={() => setShow(true)} />
             <Navbar.Offcanvas
