@@ -32,7 +32,7 @@ const Hero = () => {
 
   return (
     <main className="">
-      <Container id="Homebased">
+      <div id="Homebased">
         <div className="navBase mb-5">
           <Carousel fade className="carouselMain">
             {carouselData.map((detail, index) => {
@@ -53,7 +53,7 @@ const Hero = () => {
           </Carousel>
           <h2 className="welcomeTitle">Welcome</h2>
         </div>
-      </Container>{" "}
+      </div>{" "}
       <div className="bodyElement text-center mb-4 py-5">
         <Container className="d-flex flex-column align-items-center justify-content-center aboutContents">
           <Row>
@@ -66,6 +66,7 @@ const Hero = () => {
                 a novice home cook, we're here to guide you on your culinary
                 journey.
               </p>
+
               <a href="/body">
                 <button className="aboutButtons px-4 py-1">LEARN MORE</button>
               </a>
